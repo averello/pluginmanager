@@ -7,9 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE65DD74189003E300A83092 /* libmemorymanagement.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE667168188FF2100022B694 /* libmemorymanagement.a */; };
+		DE65DD75189003F200A83092 /* plugin_manager.c in Sources */ = {isa = PBXBuildFile; fileRef = DE66716B1890023D0022B694 /* plugin_manager.c */; };
+		DE65DD77189003FC00A83092 /* plugin_manager.h in Headers */ = {isa = PBXBuildFile; fileRef = DE66715F188FF17F0022B694 /* plugin_manager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE65DD78189003FC00A83092 /* plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = DE667160188FF17F0022B694 /* plugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE65DD79189003FC00A83092 /* uuid.h in Headers */ = {isa = PBXBuildFile; fileRef = DE66715D188FF1760022B694 /* uuid.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE65DD7C1890040B00A83092 /* liblibpluginmanager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE65DD6E189003DA00A83092 /* liblibpluginmanager.a */; };
+		DE65DD911890152400A83092 /* testplugin.c in Sources */ = {isa = PBXBuildFile; fileRef = DE65DD901890152400A83092 /* testplugin.c */; };
+		DE65DD9C18901E5100A83092 /* testplugin2.c in Sources */ = {isa = PBXBuildFile; fileRef = DE65DD9B18901E5100A83092 /* testplugin2.c */; };
 		DE667154188FF15D0022B694 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = DE667153188FF15D0022B694 /* main.c */; };
 		DE667156188FF15D0022B694 /* pluginmanager.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE667155188FF15D0022B694 /* pluginmanager.1 */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DE65DD72189003DF00A83092 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE667162188FF2100022B694 /* memorymanagement.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = DE89853C184A6C6E006C371B;
+			remoteInfo = memorymanagement;
+		};
+		DE65DD7A1890040600A83092 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE667148188FF15D0022B694 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE65DD6D189003DA00A83092;
+			remoteInfo = libpluginmanager;
+		};
+		DE667167188FF2100022B694 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE667162188FF2100022B694 /* memorymanagement.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DE89853D184A6C6E006C371B;
+			remoteInfo = memorymanagement;
+		};
+		DE667169188FF2100022B694 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE667162188FF2100022B694 /* memorymanagement.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DE14C30E184B7055008D6559;
+			remoteInfo = testMemoryManagement;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		DE66714E188FF15D0022B694 /* CopyFiles */ = {
@@ -25,26 +64,79 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DE65DD6E189003DA00A83092 /* liblibpluginmanager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibpluginmanager.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE65DD8B189014FF00A83092 /* libtestplugin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libtestplugin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE65DD901890152400A83092 /* testplugin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = testplugin.c; sourceTree = "<group>"; };
+		DE65DD9618901E3300A83092 /* libtestplugin2.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libtestplugin2.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE65DD9B18901E5100A83092 /* testplugin2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = testplugin2.c; path = pluginmanager/testplugin2.c; sourceTree = "<group>"; };
 		DE667150188FF15D0022B694 /* pluginmanager */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = pluginmanager; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE667153188FF15D0022B694 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		DE667155188FF15D0022B694 /* pluginmanager.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = pluginmanager.1; sourceTree = "<group>"; };
+		DE66715D188FF1760022B694 /* uuid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uuid.h; sourceTree = "<group>"; };
+		DE66715F188FF17F0022B694 /* plugin_manager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = plugin_manager.h; sourceTree = "<group>"; };
+		DE667160188FF17F0022B694 /* plugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = plugin.h; sourceTree = "<group>"; };
+		DE667162188FF2100022B694 /* memorymanagement.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = memorymanagement.xcodeproj; path = ../memorymanagement/memorymanagement.xcodeproj; sourceTree = "<group>"; };
+		DE66716B1890023D0022B694 /* plugin_manager.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = plugin_manager.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DE66714D188FF15D0022B694 /* Frameworks */ = {
+		DE65DD6B189003DA00A83092 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE65DD74189003E300A83092 /* libmemorymanagement.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE65DD88189014FF00A83092 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DE65DD9318901E3300A83092 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE66714D188FF15D0022B694 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE65DD7C1890040B00A83092 /* liblibpluginmanager.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE65DD8F1890150D00A83092 /* testplugin */ = {
+			isa = PBXGroup;
+			children = (
+				DE65DD901890152400A83092 /* testplugin.c */,
+			);
+			name = testplugin;
+			path = pluginmanager;
+			sourceTree = "<group>";
+		};
+		DE65DD9A18901E3B00A83092 /* testplugin2 */ = {
+			isa = PBXGroup;
+			children = (
+				DE65DD9B18901E5100A83092 /* testplugin2.c */,
+			);
+			name = testplugin2;
+			sourceTree = "<group>";
+		};
 		DE667147188FF15D0022B694 = {
 			isa = PBXGroup;
 			children = (
+				DE667162188FF2100022B694 /* memorymanagement.xcodeproj */,
 				DE667152188FF15D0022B694 /* pluginmanager */,
+				DE65DD8F1890150D00A83092 /* testplugin */,
+				DE65DD9A18901E3B00A83092 /* testplugin2 */,
 				DE667151188FF15D0022B694 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +145,9 @@
 			isa = PBXGroup;
 			children = (
 				DE667150188FF15D0022B694 /* pluginmanager */,
+				DE65DD6E189003DA00A83092 /* liblibpluginmanager.a */,
+				DE65DD8B189014FF00A83092 /* libtestplugin.dylib */,
+				DE65DD9618901E3300A83092 /* libtestplugin2.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,15 +155,107 @@
 		DE667152188FF15D0022B694 /* pluginmanager */ = {
 			isa = PBXGroup;
 			children = (
+				DE66715F188FF17F0022B694 /* plugin_manager.h */,
+				DE66716B1890023D0022B694 /* plugin_manager.c */,
+				DE667160188FF17F0022B694 /* plugin.h */,
+				DE66715D188FF1760022B694 /* uuid.h */,
 				DE667153188FF15D0022B694 /* main.c */,
 				DE667155188FF15D0022B694 /* pluginmanager.1 */,
 			);
 			path = pluginmanager;
 			sourceTree = "<group>";
 		};
+		DE667163188FF2100022B694 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE667168188FF2100022B694 /* libmemorymanagement.a */,
+				DE66716A188FF2100022B694 /* testMemoryManagement */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		DE65DD6C189003DA00A83092 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE65DD77189003FC00A83092 /* plugin_manager.h in Headers */,
+				DE65DD78189003FC00A83092 /* plugin.h in Headers */,
+				DE65DD79189003FC00A83092 /* uuid.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE65DD89189014FF00A83092 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE65DD9418901E3300A83092 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		DE65DD6D189003DA00A83092 /* libpluginmanager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE65DD6F189003DA00A83092 /* Build configuration list for PBXNativeTarget "libpluginmanager" */;
+			buildPhases = (
+				DE65DD6A189003DA00A83092 /* Sources */,
+				DE65DD6B189003DA00A83092 /* Frameworks */,
+				DE65DD6C189003DA00A83092 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE65DD73189003DF00A83092 /* PBXTargetDependency */,
+			);
+			name = libpluginmanager;
+			productName = libpluginmanager;
+			productReference = DE65DD6E189003DA00A83092 /* liblibpluginmanager.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		DE65DD8A189014FF00A83092 /* testplugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE65DD8C189014FF00A83092 /* Build configuration list for PBXNativeTarget "testplugin" */;
+			buildPhases = (
+				DE65DD87189014FF00A83092 /* Sources */,
+				DE65DD88189014FF00A83092 /* Frameworks */,
+				DE65DD89189014FF00A83092 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = testplugin;
+			productName = testplugin;
+			productReference = DE65DD8B189014FF00A83092 /* libtestplugin.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		DE65DD9518901E3300A83092 /* testplugin2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE65DD9718901E3300A83092 /* Build configuration list for PBXNativeTarget "testplugin2" */;
+			buildPhases = (
+				DE65DD9218901E3300A83092 /* Sources */,
+				DE65DD9318901E3300A83092 /* Frameworks */,
+				DE65DD9418901E3300A83092 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = testplugin2;
+			productName = testplugin2;
+			productReference = DE65DD9618901E3300A83092 /* libtestplugin2.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
 		DE66714F188FF15D0022B694 /* pluginmanager */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE667159188FF15D0022B694 /* Build configuration list for PBXNativeTarget "pluginmanager" */;
@@ -80,6 +267,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				DE65DD7B1890040600A83092 /* PBXTargetDependency */,
 			);
 			name = pluginmanager;
 			productName = pluginmanager;
@@ -105,14 +293,64 @@
 			mainGroup = DE667147188FF15D0022B694;
 			productRefGroup = DE667151188FF15D0022B694 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = DE667163188FF2100022B694 /* Products */;
+					ProjectRef = DE667162188FF2100022B694 /* memorymanagement.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				DE66714F188FF15D0022B694 /* pluginmanager */,
+				DE65DD6D189003DA00A83092 /* libpluginmanager */,
+				DE65DD8A189014FF00A83092 /* testplugin */,
+				DE65DD9518901E3300A83092 /* testplugin2 */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		DE667168188FF2100022B694 /* libmemorymanagement.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libmemorymanagement.a;
+			remoteRef = DE667167188FF2100022B694 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DE66716A188FF2100022B694 /* testMemoryManagement */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = testMemoryManagement;
+			remoteRef = DE667169188FF2100022B694 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXSourcesBuildPhase section */
+		DE65DD6A189003DA00A83092 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE65DD75189003F200A83092 /* plugin_manager.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE65DD87189014FF00A83092 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE65DD911890152400A83092 /* testplugin.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE65DD9218901E3300A83092 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE65DD9C18901E5100A83092 /* testplugin2.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DE66714C188FF15D0022B694 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -123,7 +361,80 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		DE65DD73189003DF00A83092 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = memorymanagement;
+			targetProxy = DE65DD72189003DF00A83092 /* PBXContainerItemProxy */;
+		};
+		DE65DD7B1890040600A83092 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE65DD6D189003DA00A83092 /* libpluginmanager */;
+			targetProxy = DE65DD7A1890040600A83092 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		DE65DD70189003DA00A83092 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DE65DD71189003DA00A83092 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DE65DD8D189014FF00A83092 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DE65DD8E189014FF00A83092 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DE65DD9818901E3300A83092 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DE65DD9918901E3300A83092 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		DE667157188FF15D0022B694 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -155,6 +466,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(CONFIGURATION_BUILD_DIR)/usr/local/include\"",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -187,6 +503,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(CONFIGURATION_BUILD_DIR)/usr/local/include\"",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				SDKROOT = macosx;
 			};
@@ -209,6 +530,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DE65DD6F189003DA00A83092 /* Build configuration list for PBXNativeTarget "libpluginmanager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE65DD70189003DA00A83092 /* Debug */,
+				DE65DD71189003DA00A83092 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE65DD8C189014FF00A83092 /* Build configuration list for PBXNativeTarget "testplugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE65DD8D189014FF00A83092 /* Debug */,
+				DE65DD8E189014FF00A83092 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE65DD9718901E3300A83092 /* Build configuration list for PBXNativeTarget "testplugin2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE65DD9818901E3300A83092 /* Debug */,
+				DE65DD9918901E3300A83092 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DE66714B188FF15D0022B694 /* Build configuration list for PBXProject "pluginmanager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -225,6 +573,7 @@
 				DE66715B188FF15D0022B694 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
