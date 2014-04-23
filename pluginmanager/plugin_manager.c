@@ -97,7 +97,7 @@ static void PMPluginManagerDealloc();
 
 PMPluginManager *PMPluginManagerCreate() {
 	PMPluginManager *manager = MEMORY_MANAGEMENT_ALLOC(sizeof(PMPluginManager));
-	if (NULL==manager) return NULL;
+	if (NULL==manager) return errno = ENOMEM, NULL;
 	MEMORY_MANAGEMENT_ATTRIBUTE_SET_DEALLOC_FUNCTION(manager, PMPluginManagerDealloc);
 	TAILQ_INIT(&manager->plugins);
 	return manager;
@@ -107,7 +107,7 @@ static void PMPluginManagerDealloc(void *_manager) {
 	if (NULL == _manager) return;
 	PMPluginManager *manager = _manager;
 	struct _list_item *item, *tmp;
-		
+	
 	TAILQ_FOREACH_SAFE(item, &manager->plugins, items, tmp) {
 		PMPluginManagerUnload(manager, item->plugin);
 	}
@@ -122,13 +122,13 @@ void PMPluginManagerRelease(PMPluginManager *manager) {
 
 PMPlugin *PMPluginCreate() {
 	PMPlugin *plugin = MEMORY_MANAGEMENT_ALLOC(sizeof(PMPlugin));
-	if (NULL == plugin) return NULL;
+	if (NULL == plugin) return errno = ENOMEM, NULL;
 	return plugin;
 }
 
 PMPlugin *PMPluginManagerLoad(PMPluginManager *manager, const char *path) {
-	if (NULL == manager) return NULL;
-	if (NULL == path) return NULL;
+	if (NULL == manager) return errno = EINVAL, NULL;
+	if (NULL == path) return errno = EINVAL, NULL;
 	PMPlugin *plugin;
 	struct _list_item *item;
 	char *error;
@@ -138,8 +138,8 @@ PMPlugin *PMPluginManagerLoad(PMPluginManager *manager, const char *path) {
 	plugin = PMPluginCreate();
 	if (NULL == plugin) return NULL;
 	item = MEMORY_MANAGEMENT_ALLOC(sizeof(struct _list_item));
-	if (NULL == item) return release(plugin), NULL;
-
+	if (NULL == item) return release(plugin), errno = ENOMEM, NULL;
+	
 	handle = dlopen(path, RTLD_LAZY|RTLD_LOCAL);
 	if (NULL == handle) {
 		fprintf(stderr, "%s\n", dlerror());
@@ -181,8 +181,8 @@ PMPlugin *PMPluginManagerLoad(PMPluginManager *manager, const char *path) {
 }
 
 int PMPluginManagerUnload(PMPluginManager *manager, PMPlugin *plugin) {
-	if (NULL == manager) return -1;
-	if (NULL == plugin) return -1;
+	if (NULL == manager) return errno = EINVAL, -1;
+	if (NULL == plugin) return errno = EINVAL, -1;
 	struct _list_item *item;
 	TAILQ_FOREACH(item, &manager->plugins, items) {
 		if (item->plugin == plugin) {
@@ -200,8 +200,8 @@ int PMPluginManagerUnload(PMPluginManager *manager, PMPlugin *plugin) {
 }
 
 int PMPluginManagerStartPlugin(PMPluginManager *manager, PMPlugin *plugin) {
-	if (NULL == manager) return -1;
-	if (NULL == plugin) return  -1;
+	if (NULL == manager) return errno = EINVAL, -1;
+	if (NULL == plugin) return  errno = EINVAL, -1;
 	if (plugin->state == pm_plugin_state_registered ) {
 		(*plugin->state)(plugin, PMPluginEventStart);
 		return (*plugin->registrationInfo.start)(manager);
