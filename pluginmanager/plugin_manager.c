@@ -224,32 +224,14 @@ void PMPluginManagerStopPlugin(PMPluginManager *manager, PMPlugin *plugin) {
 ////////////////////
 /*  Plugin Calls  */
 ////////////////////
-PMPlugin *PMPluginManagerRegisterPlugin(PMPluginManager *manager, PMPluginRegistration pluginRegistration) {
-	if (NULL==manager) return NULL;
-	PMPlugin *plugin = PMPluginCreate();
-	if (NULL == plugin) return NULL;
-	struct _list_item *item = MEMORY_MANAGEMENT_ALLOC(sizeof(struct _list_item));
-	if (NULL == item) return release(plugin), NULL;
-	
-	// check if already registered
-	struct _list_item *it;
-	TAILQ_FOREACH(it, &manager->plugins, items) {
-		if ( uuid_cmp(it->plugin->registrationInfo.uuid, pluginRegistration.uuid) == 0) {
-			// Plugin already loaded
-			release(plugin);
-			release(item);
-			return NULL;
-		}
-	}
+const char *PMPluginGetID(PMPlugin *plugin) {
+	if (NULL == plugin) return errno = EINVAL, NULL;
+	return plugin->registrationInfo.pluginID;
+}
 
-	plugin->state = pm_plugin_state_registered;
-	plugin->registrationInfo = pluginRegistration;
-
-	item->plugin = retain(plugin);
-	TAILQ_INSERT_TAIL(&manager->plugins, item, items);
-	release(plugin);
-	
-	return plugin;
+UUID PMPluginGetUUID(PMPlugin *plugin) {
+	if (NULL == plugin) return errno = EINVAL, UUIDInvalid;
+	return plugin->registrationInfo.uuid;
 }
 ////////////////////
 /*                */

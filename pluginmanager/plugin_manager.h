@@ -13,6 +13,8 @@
 //extern "C" {
 //#endif
 
+#include "uuid.h"
+
 typedef struct pm_plugin_t PMPlugin;
 typedef struct pm_plugin_registration_t PMPluginRegistration;
 typedef struct pm_plugin_manager_t PMPluginManager;
@@ -29,9 +31,8 @@ int PMPluginManagerStartPlugin(PMPluginManager *manager, PMPlugin *plugin) __att
 void PMPluginManagerStopPlugin(PMPluginManager *manager, PMPlugin *plugin) __attribute__((nonnull));
 
 
-/* Plugin calls */
-PMPlugin *PMPluginManagerRegisterPlugin(PMPluginManager *manager, PMPluginRegistration pluginRegistration) __attribute__((nonnull));
-
+const char *PMPluginGetID(PMPlugin *plugin) __attribute__((nonnull));
+UUID PMPluginGetUUID(PMPlugin *plugin);
 
 //#ifdef _cplusplus
 //}
