@@ -4,14 +4,44 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>libpluginmanager.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>pluginmanager.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>testplugin.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>testplugin2.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>DE65DD6D189003DA00A83092</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DE65DD8A189014FF00A83092</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DE65DD9518901E3300A83092</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>DE66714F188FF15D0022B694</key>
 		<dict>
 			<key>primary</key>
