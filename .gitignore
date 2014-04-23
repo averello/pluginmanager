@@ -161,6 +161,8 @@ xcuserdata
 # Object files
 *.o
 *.ko
+*.obj
+*.elf
 
 # Libraries
 *.lib
@@ -176,12 +178,11 @@ xcuserdata
 *.exe
 *.out
 *.app
+*.i*86
+*.x86_64
+*.hex
 
 doc/html
 doc/Doxyfile.warnings
-*.o
-*.a
-*.so
 bin/*
-lib/*.a
 pluginmanager.xcodeproj/project.xcworkspace/xcshareddata/pluginmanager.xccheckout
