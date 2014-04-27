@@ -64,6 +64,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DE5540A0190DB43500964A9E /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		DE5540A1190DB43500964A9E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		DE65DD6E189003DA00A83092 /* liblibpluginmanager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibpluginmanager.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE65DD8B189014FF00A83092 /* libtestplugin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libtestplugin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE65DD901890152400A83092 /* testplugin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = testplugin.c; sourceTree = "<group>"; };
@@ -133,6 +135,8 @@
 		DE667147188FF15D0022B694 = {
 			isa = PBXGroup;
 			children = (
+				DE5540A0190DB43500964A9E /* LICENSE */,
+				DE5540A1190DB43500964A9E /* README.md */,
 				DE667162188FF2100022B694 /* memorymanagement.xcodeproj */,
 				DE667152188FF15D0022B694 /* pluginmanager */,
 				DE65DD8F1890150D00A83092 /* testplugin */,
